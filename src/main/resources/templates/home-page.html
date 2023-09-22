@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Hello Programmers</h1>
+<hr />
+
+<p th:if="${error}" th:text="${error}"></p>
+
+<br />
+<form action="/list-all-candidates">
+    <button type="submit">List All Candidates</button>
+</form>
+
+<br />
+<form action="/add-candidate">
+    <button type="submit">Add Candidate</button>
+</form>
+
+<br />
+<form action="/find-by-id" method="post">
+    <input type="number" name="id" placeholder="Candidate Id" />
+    <button type="submit">Find Candidate By Id</button>
+</form>
+</body>
+</html>
