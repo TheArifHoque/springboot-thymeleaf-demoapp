@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Candidate Page</title>
+</head>
+<body>
+<h1>Add Candidate Info</h1>
+<hr />
+
+<br />
+<form action="/add-candidate" method="post">
+    <p>Candidate Id</p>
+    <input type="number" name="id" />
+    <p>Candidate name</p>
+    <input type="text" name="name" />
+    <p>Candidate's Batch</p>
+    <input type="text" name="batch" />
+    <button type="submit">Add Candidate</button>
+</form>
+</body>
+</html>

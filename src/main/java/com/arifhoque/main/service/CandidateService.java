@@ -1,14 +1,18 @@
 package com.arifhoque.main.service;
 
 import com.arifhoque.main.model.Candidate;
+import jakarta.annotation.PostConstruct;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@Service
 public class CandidateService {
     List<Candidate> candidateList = new ArrayList<>();
 
+    @PostConstruct
     public void init() {
         candidateList.add(new Candidate(101, "ABC", "Java Batch -6"));
         candidateList.add(new Candidate(102, "DEF", "Java Batch -6"));

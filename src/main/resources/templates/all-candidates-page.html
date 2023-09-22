@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>All Candidate Page</title>
+</head>
+<body>
+<h1>All Candidate Info</h1>
+<hr />
+
+<br />
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Batch</th>
+  </tr>
+  <tr th:each="candidate : ${candidateList}">
+    <td th:text="${candidate.id}"></td>
+    <td th:text="${candidate.name}"></td>
+    <td th:text="${candidate.batch}"></td>
+  </tr>
+</table>
+</body>
+</html>
