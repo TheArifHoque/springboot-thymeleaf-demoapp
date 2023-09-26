@@ -13,12 +13,12 @@
 <p th:if="${error}" th:text="${error}"></p>
 
 <br />
-<form action="/list-all-candidates">
+<form action="/list-all-candidates" method="get">
     <button type="submit">List All Candidates</button>
 </form>
 
 <br />
-<form action="/add-candidate">
+<form action="/add-candidate" method="get">
     <button type="submit">Add Candidate</button>
 </form>
 
