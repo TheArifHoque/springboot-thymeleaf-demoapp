@@ -40,7 +40,7 @@ public class MainController {
     @PostMapping("/add-candidate")
     public String addCandidate(@ModelAttribute Candidate candidate){
         candidateService.addCandidate(candidate);
-        return "home-page.html";
+        return "redirect:/home";
     }
 
     @GetMapping("/list-all-candidates")
