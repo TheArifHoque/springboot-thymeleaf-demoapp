@@ -4,28 +4,46 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 <body>
-<h1>Hello Programmers</h1>
-<hr />
+    <div class="navbar">
+        <p>Spring Boot Thymeleaf</p>
+    </div>
 
-<p th:if="${error}" th:text="${error}"></p>
+    <div class="main-container">
+        <div class="left-container">
+             <img th:src="@{/image/banner-image.svg}" alt="image">
+        </div>
 
-<br />
-<form action="/list-all-candidates" method="get">
-    <button type="submit">List All Candidates</button>
-</form>
+        <div class="right-container">
+            <div class="card">
+                <h1>Hello Programmers</h1>
+                <hr />
+    
+                <p th:if="${error}" th:text="${error}"></p>
+    
+                <form action="/list-all-candidates" method="get">
+                    <button type="submit">List All Candidates</button>
+                </form>
+    
+                <form action="/add-candidate" method="get">
+                    <button type="submit">Add Candidate</button>
+                </form>
+    
+                <form action="/find-by-id" method="post">
+                    <input type="number" name="id" placeholder="Candidate Id" required/>
+                    <button type="submit">Find Candidate By Id</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-<br />
-<form action="/add-candidate" method="get">
-    <button type="submit">Add Candidate</button>
-</form>
-
-<br />
-<form action="/find-by-id" method="post">
-    <input type="number" name="id" placeholder="Candidate Id" required/>
-    <button type="submit">Find Candidate By Id</button>
-</form>
+    <div class="footer">
+        <p>(c)TheArifHoque</p>
+    </div>
 </body>
 </html>
